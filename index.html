@@ -3,220 +3,249 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHiC BAG</title>
+<title>CHiC BAG | حقائب نسائية فاخرة</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
+:root{
+  --main-color: #d4af37;
+  --dark: #111111;
+  --light: #f8f8f8;
+}
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Cairo', sans-serif;
 }
 
 body{
-background:#f5f5f5;
+  background:var(--light);
+  color:#333;
 }
 
 header{
-background:#000;
-color:#fff;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+  background:#fff;
+  color:var(--dark);
+  padding:15px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+header h2{
+  font-weight:900;
+  letter-spacing:1px;
 }
 
 header a{
-color:white;
-text-decoration:none;
-margin:0 10px;
+  color:var(--dark);
+  text-decoration:none;
+  margin:0 12px;
+  font-weight:700;
+  transition:0.3s;
 }
+header a:hover{ color:var(--main-color); }
 
 .hero{
-background:#111;
-color:white;
-text-align:center;
-padding:70px 20px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+  color:white;
+  text-align:center;
+  padding:100px 20px;
 }
 
 .hero h1{
-font-size:40px;
-margin-bottom:15px;
+  font-size:48px;
+  margin-bottom:15px;
+  font-weight:900;
+}
+
+.hero p{
+  font-size:20px;
+  opacity:0.9;
+  margin-bottom:30px;
 }
 
 .hero button{
-background:#d4af37;
-border:none;
-padding:15px 30px;
-border-radius:5px;
-cursor:pointer;
-font-size:18px;
+  background:var(--main-color);
+  color:#111;
+  border:none;
+  padding:16px 40px;
+  border-radius:50px;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:700;
+  transition:0.3s;
+}
+.hero button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px var(--main-color);
 }
 
 .products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  padding:60px 5%;
+  max-width:1200px;
+  margin:auto;
 }
 
 .card{
-background:white;
-padding:15px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 0 10px rgba(0,0,0,.1);
+  background:white;
+  padding:0;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+  overflow:hidden;
+  transition:0.3s ease;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow:0 12px 30px rgba(0,0,0,.15);
 }
 
 .card img{
-width:100%;
-border-radius:10px;
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  display:block;
 }
 
+.card h3{ 
+  padding:15px 15px 5px; 
+  font-size:22px;
+}
 .price{
-color:#d4af37;
-font-size:22px;
-margin:10px 0;
+  color:var(--main-color);
+  font-size:24px;
+  font-weight:700;
+  margin-bottom:15px;
 }
 
-button{
-background:black;
-color:white;
-border:none;
-padding:10px 20px;
-border-radius:5px;
-cursor:pointer;
+.card button{
+  background:var(--dark);
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:50px;
+  cursor:pointer;
+  width:90%;
+  margin:0 15px 20px;
+  font-weight:700;
+  transition:0.3s;
 }
+.card button:hover{ background:var(--main-color); color:#111; }
+
+.features{
+  padding:60px 5%;
+  background:#fff;
+  text-align:center;
+}
+.features h2{ font-size:32px; margin-bottom:40px; }
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  max-width:1000px;
+  margin:auto;
+}
+.feature{
+  padding:20px;
+}
+.feature-icon{ font-size:40px; margin-bottom:10px; }
+.feature h4{ font-size:20px; margin-bottom:5px; }
 
 footer{
-background:#000;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
+  background:var(--dark);
+  color:white;
+  text-align:center;
+  padding:25px;
+  margin-top:40px;
+  font-size:14px;
 }
 </style>
 
 </head>
-
 <body>
 
 <header>
-<h2>CHiC BAG</h2>
-
+<h2>CHIC BAG</h2>
 <nav>
 <a href="#">الرئيسية</a>
-<a href="#">المنتجات</a>
-<a href="#">السلة</a>
+<a href="#products">المنتجات</a>
 <a href="#">اتصل بنا</a>
 </nav>
-
 </header>
 
 <section class="hero">
-<h1>أهلاً بك في CHiC BAG</h1>
-
-<p>أفضل الحقائب النسائية بأفضل الأسعار.</p>
-
-<br>
-
-<button>تسوق الآن</button>
-
+<h1>أناقتك تبدأ من هنا ✨</h1>
+<p>تشكيلة حقائب نسائية عصرية بجودة عالية وأسعار تنافسية</p>
+<button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">اكتشفي المجموعة</button>
 </section>
 
-<section class="products">
-
-<div class="card">
-
-<img src="https://via.placeholder.com/300x300">
-
-<h3>حقيبة نسائية</h3>
-
-<p class="price">179 درهم</p>
-
-<a href="https://wa.me/2126XXXXXXXX?text=السلام عليكم، بغيت نطلب حقيبة نسائية بثمن 179 درهم" target="_blank">
-<button>اطلب الآن عبر واتساب</button>
-</a>
-
-</div>
-
-<div class="card">
-
-<img src="https://via.placeholder.com/300x300">
-
-<h3>حقيبة جلد</h3>
-
-<p class="price">249 درهم</p>
-
-  <a href="https://wa.me/2126XXXXXXXX?text=السلام عليكم، بغيت نطلب حقيبة نسائية بثمن 179 درهم" target="_blank">
-<button>اطلب الآن عبر واتساب</button>
-</a>
-
-</div>
-
-<div class="card">
-
-<img src="https://via.placeholder.com/300x300">
-
-<h3>حقيبة عصرية</h3>
-
-<p class="price">199 درهم</p>
-
-
-  <a href="https://wa.me/2126XXXXXXXX?text=السلام عليكم، بغيت نطلب حقيبة نسائية بثمن 179 درهم" target="_blank">
-<button>اطلب الآن عبر واتساب</button>
-</a>
-
-</div>
-
-</section>
-</div>
-</section>
-
-<!-- هنا لصق الكود ديال لماذا تختارنا -->
-
-<section style="padding:50px;background:#fff;text-align:center;">
-    <h2>لماذا تختار CHIC BAG؟</h2>
-    <br>
-    <div style="display:flex;justify-content:center;gap:30px;flex-wrap:wrap;">
-        <div>
-            <h3>🚚 توصيل سريع</h3>
-            <p>نوصل طلبك في أسرع وقت.</p>
-        </div>
-
-        <div>
-            <h3>💳 الدفع عند الاستلام</h3>
-            <p>خلص غير ملي توصلك السلعة.</p>
-        </div>
-
-        <div>
-            <h3>⭐ جودة مضمونة</h3>
-            <p>منتجات بجودة عالية وأسعار مناسبة.</p>
-        </div>
+<section class="features">
+  <h2>لماذا تختارين CHIC BAG؟</h2>
+  <div class="features-grid">
+    <div class="feature">
+      <div class="feature-icon">🚚</div>
+      <h4>توصيل سريع</h4>
+      <p>يوصلك طلبك في أسرع وقت لجميع المدن</p>
     </div>
+    <div class="feature">
+      <div class="feature-icon">💳</div>
+      <h4>الدفع عند الاستلام</h4>
+      <p>خلصي غير منين توصلك سلعتك</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">⭐</div>
+      <h4>جودة مضمونة</h4>
+      <p>منتجات أصلية بأسعار مناسبة</p>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584917865442-89a8a8d5a3f4?q=80&w=300">
+<h3>حقيبة نسائية</h3>
+<p class="price">179 درهم</p>
+<a href="https://wa.me/2126XXXXXXXX?text=السلام عليكم، بغيت نطلب 'حقيبة نسائية' بثمن 179 درهم" target="_blank">
+<button>اطلب الآن عبر واتساب</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=300">
+<h3>حقيبة جلد</h3>
+<p class="price">249 درهم</p>
+<a href="https://wa.me/2126XXXXXXXX?text=السلام عليكم، بغيت نطلب 'حقيبة جلد' بثمن 249 درهم" target="_blank">
+<button>اطلب الآن عبر واتساب</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=300">
+<h3>حقيبة عصرية</h3>
+<p class="price">199 درهم</p>
+<a href="https://wa.me/212638569590?text=السلام عليكم، بغيت نطلب 'حقيبة عصرية' بثمن 199 درهم" target="_blank">
+<button>اطلب الآن عبر واتساب</button>
+</a>
+</div>
+
 </section>
 
 <footer>
-<footer>
-
-© 2026 CHiC BAG - جميع الحقوق محفوظة
-
+© 2026 CHIC BAG - جميع الحقوق محفوظة
 </footer>
 
-<script>
-
-let cart=0;
-
-function addCart(){
-
-cart++;
-
-alert("تمت إضافة المنتج إلى السلة. عدد المنتجات: "+cart);
-
-}
-
-</script>
-
 </body>
-
 </html>
