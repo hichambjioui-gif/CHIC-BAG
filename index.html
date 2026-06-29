@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHiC BAG</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+header{
+background:#000;
+color:#fff;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+}
+
+.hero{
+background:#111;
+color:white;
+text-align:center;
+padding:70px 20px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.hero button{
+background:#d4af37;
+border:none;
+padding:15px 30px;
+border-radius:5px;
+cursor:pointer;
+font-size:18px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.card{
+background:white;
+padding:15px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.price{
+color:#d4af37;
+font-size:22px;
+margin:10px 0;
+}
+
+button{
+background:black;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+footer{
+background:#000;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h2>CHiC BAG</h2>
+
+<nav>
+<a href="#">الرئيسية</a>
+<a href="#">المنتجات</a>
+<a href="#">السلة</a>
+<a href="#">اتصل بنا</a>
+</nav>
+
+</header>
+
+<section class="hero">
+<h1>أهلاً بك في CHiC BAG</h1>
+
+<p>أفضل الحقائب النسائية بأفضل الأسعار.</p>
+
+<br>
+
+<button>تسوق الآن</button>
+
+</section>
+
+<section class="products">
+
+<div class="card">
+
+<img src="https://via.placeholder.com/300x300">
+
+<h3>حقيبة نسائية</h3>
+
+<p class="price">179 درهم</p>
+
+<button onclick="addCart()">أضف إلى السلة</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://via.placeholder.com/300x300">
+
+<h3>حقيبة جلد</h3>
+
+<p class="price">249 درهم</p>
+
+<button onclick="addCart()">أضف إلى السلة</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://via.placeholder.com/300x300">
+
+<h3>حقيبة عصرية</h3>
+
+<p class="price">199 درهم</p>
+
+<button onclick="addCart()">أضف إلى السلة</button>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 CHiC BAG - جميع الحقوق محفوظة
+
+</footer>
+
+<script>
+
+let cart=0;
+
+function addCart(){
+
+cart++;
+
+alert("تمت إضافة المنتج إلى السلة. عدد المنتجات: "+cart);
+
+}
+
+</script>
+
+</body>
+
+</html>
